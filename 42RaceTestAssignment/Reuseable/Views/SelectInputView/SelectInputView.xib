@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SelectInputView" customModule="_2RaceTestAssignment" customModuleProvider="target">
+            <connections>
+                <outlet property="inputTitleLabel" destination="CSt-sk-lK1" id="1FV-t6-8cA"/>
+                <outlet property="textField" destination="RVL-ic-ggW" id="k1g-oP-Hkr"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="380"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CSt-sk-lK1">
+                    <rect key="frame" x="0.0" y="0.0" width="37.5" height="17"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="RVL-ic-ggW">
+                    <rect key="frame" x="0.0" y="21" width="414" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="fXe-HN-W2N"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                            <real key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                            <color key="value" name="customBorderGray"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="8"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </textField>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="down-triangle" translatesAutoresizingMaskIntoConstraints="NO" id="K05-qj-R71">
+                    <rect key="frame" x="389" y="36" width="15" height="10"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="10" id="2OF-os-lYh"/>
+                        <constraint firstAttribute="width" constant="15" id="Bds-bj-VJc"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FXf-l9-XER">
+                    <rect key="frame" x="0.0" y="21" width="414" height="359"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title=" "/>
+                    <connections>
+                        <action selector="tapSelectButton:" destination="-1" eventType="touchUpInside" id="GDO-1z-pCA"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="FXf-l9-XER" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="RVL-ic-ggW" secondAttribute="bottom" id="5cT-ek-8xU"/>
+                <constraint firstItem="CSt-sk-lK1" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="ELB-IU-AAh"/>
+                <constraint firstItem="RVL-ic-ggW" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="EZB-k8-lVT"/>
+                <constraint firstItem="CSt-sk-lK1" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="IN4-TJ-inR"/>
+                <constraint firstItem="RVL-ic-ggW" firstAttribute="top" secondItem="CSt-sk-lK1" secondAttribute="bottom" constant="4" id="Kl2-JX-JRc"/>
+                <constraint firstAttribute="trailing" secondItem="RVL-ic-ggW" secondAttribute="trailing" id="MM0-Gx-fQ5"/>
+                <constraint firstItem="FXf-l9-XER" firstAttribute="top" secondItem="RVL-ic-ggW" secondAttribute="top" id="RAq-a4-rAK"/>
+                <constraint firstItem="FXf-l9-XER" firstAttribute="leading" secondItem="RVL-ic-ggW" secondAttribute="leading" id="ZX0-c0-lc3"/>
+                <constraint firstAttribute="bottom" secondItem="FXf-l9-XER" secondAttribute="bottom" id="bTP-KZ-1V1"/>
+                <constraint firstItem="K05-qj-R71" firstAttribute="centerY" secondItem="RVL-ic-ggW" secondAttribute="centerY" id="inQ-Ew-AMh"/>
+                <constraint firstItem="FXf-l9-XER" firstAttribute="trailing" secondItem="RVL-ic-ggW" secondAttribute="trailing" id="p9g-Yx-o7C"/>
+                <constraint firstItem="K05-qj-R71" firstAttribute="trailing" secondItem="RVL-ic-ggW" secondAttribute="trailing" constant="-10" id="wYA-gS-Dtk"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="137.68115942028987" y="-40.178571428571423"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="down-triangle" width="13" height="7.5"/>
+        <namedColor name="customBorderGray">
+            <color red="0.83529411764705885" green="0.83529411764705885" blue="0.83529411764705885" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
